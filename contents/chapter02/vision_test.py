@@ -1,7 +1,7 @@
 import google.generativeai as genai
 import PIL.Image
 
-image_data = PIL.Image.open("d:/workspace/python/gemini/contents/chapter02/images/monalisa.jpg")
+image_data = PIL.Image.open("./images/monalisa.jpg")
 model = genai.GenerativeModel('gemini-pro-vision')
 response = model.generate_content(["이 그림에 대해 한 문장으로 설명하세요.", image_data])
 print(response.text)
